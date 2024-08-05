@@ -1,0 +1,41 @@
+# Node modules
+node_modules/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+
+# Directory for instrumented lib/coverage
+coverage/
+
+# Dependency directories
+jspm_packages/
+
+# dotenv environment variables file
+.env
+
+# Build output
+dist/
+build/
+
+# Puppeteer Chromium binaries
+**/node_modules/puppeteer/.local-chromium/
+
+# IDE files
+.idea/
+.vscode/
+
+# MacOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Linux
+*~
