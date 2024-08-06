@@ -5,6 +5,10 @@
   "repository": "https://github.com/neeleshroy2023/automated-invoicing.git",
   "author": "neeleshroy2023 <neelesh.roy@layrins.com>",
   "license": "MIT",
+  "scripts": {
+    "install": "yarn",
+    "start": "nodemon ./app.js"
+  },
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.20.2",
@@ -13,5 +17,8 @@
     "express": "^4.19.2",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.5.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
   }
 }
