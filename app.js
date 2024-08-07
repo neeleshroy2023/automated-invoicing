@@ -1,15 +1,22 @@
-const express = require('express')
-const app = express()
-const connectDb = require('./config/db')
-const cors = require('cors')
-const bodyParser = require('body-parser')
+const express = require("express");
+const app = express();
+const connectDb = require("./config/db");
+const cors = require("cors");
+const bodyParser = require("body-parser");
+const dotenv = require("dotenv");
 
-connectDb()
+dotenv.config();
 
-app.use(cors())
-app.use(bodyParser.json())
+connectDb();
 
-app.use('/api/invoices', require('./routes/invoices'))
+app.use(cors());
+app.use(bodyParser.json());
 
-const PORT = process.env.PORT
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname, "./frontend/build")));
+}
+
+app.use("/api/invoices", require("./routes/invoices"));
+
+const PORT = process.env.PORT;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
